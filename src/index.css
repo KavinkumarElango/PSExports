@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@import "@fontsource/fraunces/400.css";
+@import "@fontsource/fraunces/600.css";
+@import "@fontsource/fraunces/700.css";
+@import "@fontsource/fraunces/400-italic.css";
+@import "@fontsource/dm-sans/400.css";
+@import "@fontsource/dm-sans/500.css";
+@import "@fontsource/dm-sans/600.css";
+@import "@fontsource/dm-sans/700.css";
+
+@theme {
+  --color-forest: #183C35;
+  --color-forest-dark: #102722;
+  --color-forest-light: #245249;
+  --color-forest-surface: #14322C;
+  --color-ivory: #F5F0E6;
+  --color-ivory-light: #FAF7F0;
+  --color-ivory-dark: #ECE4D4;
+  --color-terracotta: #B86F52;
+  --color-terracotta-dark: #9C573E;
+  --color-terracotta-light: #CE866C;
+  --color-linen: #D9CBAF;
+  --color-linen-light: #EBE3D3;
+  --color-linen-dark: #C6B696;
+  --color-charcoal: #292D2A;
+  --color-charcoal-light: #4A514D;
+  --color-charcoal-muted: #6E7570;
+
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+  }
+
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #B86F52;
+    color: #FAF7F0;
+  }
+}
+
+/* Textile Woven CSS Pattern Utilities */
+.bg-woven-grid {
+  background-image: 
+    linear-gradient(to right, rgba(217, 203, 175, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(217, 203, 175, 0.25) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-woven-grid-dark {
+  background-image: 
+    linear-gradient(to right, rgba(217, 203, 175, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(217, 203, 175, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bg-thread-subtle {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(24, 60, 53, 0.03) 0px,
+    rgba(24, 60, 53, 0.03) 1px,
+    transparent 1px,
+    transparent 8px
+  );
+}
+
+.bg-thread-subtle-dark {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(245, 240, 230, 0.03) 0px,
+    rgba(245, 240, 230, 0.03) 1px,
+    transparent 1px,
+    transparent 8px
+  );
+}
+
+/* Custom fine border rules */
+.border-linen-fine {
+  border-color: rgba(217, 203, 175, 0.6);
+}
+
+.border-forest-fine {
+  border-color: rgba(24, 60, 53, 0.15);
+}
